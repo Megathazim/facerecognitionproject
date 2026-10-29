@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Attendance Success</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed-dim": "#ffb59a",
+                      "surface-container": "#edeeef",
+                      "secondary-fixed": "#eaddff",
+                      "secondary": "#7127e5",
+                      "on-surface": "#191c1d",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#ffd4c5",
+                      "on-background": "#191c1d",
+                      "on-secondary": "#ffffff",
+                      "on-tertiary-fixed": "#380d00",
+                      "surface-dim": "#d9dadb",
+                      "surface-bright": "#f8f9fa",
+                      "secondary-container": "#8b4aff",
+                      "outline-variant": "#c3c5d7",
+                      "primary-fixed": "#dbe1ff",
+                      "on-secondary-fixed": "#25005a",
+                      "primary-fixed-dim": "#b5c4ff",
+                      "tertiary-fixed": "#ffdbcf",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#1353d8",
+                      "surface-variant": "#e1e3e4",
+                      "tertiary-container": "#ad3b00",
+                      "on-primary-container": "#d4dcff",
+                      "on-secondary-fixed-variant": "#5a00c6",
+                      "surface-container-low": "#f3f4f5",
+                      "background": "#f8f9fa",
+                      "on-surface-variant": "#434654",
+                      "on-primary-fixed": "#00174d",
+                      "primary-container": "#1a56db",
+                      "surface-container-highest": "#e1e3e4",
+                      "inverse-primary": "#b5c4ff",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "outline": "#737686",
+                      "primary": "#003fb1",
+                      "on-primary-fixed-variant": "#003dab",
+                      "surface-container-high": "#e7e8e9",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f0f1f2",
+                      "surface": "#f8f9fa",
+                      "tertiary": "#852b00",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#fffbff",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#802a00",
+                      "inverse-surface": "#2e3132",
+                      "secondary-fixed-dim": "#d2bbff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "margin-mobile": "16px",
+                      "margin-desktop": "32px",
+                      "unit": "4px",
+                      "max-width": "1200px"
+              },
+              "fontFamily": {
+                      "headline-lg": [
+                              "Hanken Grotesk"
+                      ],
+                      "stats-number": [
+                              "Hanken Grotesk"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Hanken Grotesk"
+                      ],
+                      "headline-lg-mobile": [
+                              "Hanken Grotesk"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "stats-number": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col font-body-md">
+<!-- Header / TopAppBar -->
+<header class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16 w-full z-50 bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline">
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-primary-fixed-dim hover:bg-surface-container-low dark:hover:bg-surface-container-highest transition-colors active:scale-95 duration-150 p-2 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">EduCheck AI</h1>
+</div>
+<div class="flex items-center">
+<img alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-surface" data-alt="A small, circular avatar portrait of a modern educator with a friendly smile, set against a bright, clean background. The style is professional and corporate modern, utilizing soft, high-key lighting to emphasize clarity and approachability. The image fits perfectly within a light mode UI aesthetic, complementing a primary blue palette with neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAt-wqW4l_IfvaokJbw8AS0oC0mEhonDykgUQAJQMXrHOV2IhRuFv8Uw9rOnxj5-j7cvNAXVaRn3pGO5owCHfcZGXuWkE3wYWK4boIE66GXb-hb67GkIGQrHI6rgmVjS6l2G4maXmKV5jp23povRISABizw02BamB4EvH4OXtrTCtq_WS2BLE0c2yCRaIXC-IQJZwhO7_myqiorlTX6seqza7ep8XFTAHZ6XBWLYR0LE4n84Iv-lkyG"/>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col items-center justify-center p-6 pb-32">
+<div class="max-w-md w-full bg-surface-container-lowest border border-outline-variant rounded-xl p-8 flex flex-col items-center text-center">
+<!-- Success Icon -->
+<div class="w-24 h-24 bg-[#e6f4ea] rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-[64px] text-[#137333]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<!-- Profile Info -->
+<div class="mb-6 relative">
+<img alt="Marcus Chen" class="w-20 h-20 rounded-full border border-outline-variant shadow-sm mx-auto mb-3" data-alt="A clear, professional headshot of a young male student, Marcus Chen. He is wearing a casual but neat collared shirt. The background is a soft, solid light gray to maintain the corporate modern and clean aesthetic of the app. The lighting is even and bright, suitable for a profile photo in a structured, light-mode educational application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBskW_jR0H9s4ZnXXzcd_eCYdOYv6FI7DE_Bsk09mmSoItTogCXNpNwRGeDXo7-IGclA5wUOWUwfKd1HyTlBeZLeyqTHBVDusORVnLiExfL-6ZGJkC3yDp-ZD3BjdqLK_H3MvCbHDAbesASrs33GxSztpFhOIUvCj_98DPvJ4-BvkJiDiXFc-l54gLbv6c9UhkbGGSXJOVRzgERwd_vvSLip15NpISrDIS0voM8FObgrLLBAVCL-53V"/>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Marcus Chen</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">ID: STU-2024-8932</p>
+</div>
+<!-- Message -->
+<div class="mb-8 w-full border-t border-b border-surface-variant py-4">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Attendance Recorded Successfully</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                    Today, 08:45 AM
+                </p>
+</div>
+<!-- Actions -->
+<div class="w-full flex flex-col gap-3">
+<button class="w-full bg-primary text-on-primary font-label-md text-label-md py-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors active:scale-95 duration-150 h-11 flex items-center justify-center">
+                    Done
+                </button>
+<button class="w-full bg-surface-container-lowest text-primary border border-outline-variant font-label-md text-label-md py-3 rounded-full hover:bg-surface-container-low transition-colors active:scale-95 duration-150 h-11 flex items-center justify-center">
+                    View History
+                </button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant dark:border-outline md:hidden">
+<button class="flex flex-col items-center justify-center bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-full px-4 py-1 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">drafts</span>
+<span class="font-label-md text-label-md mt-1">Scan</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed-dim active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-md text-label-md mt-1">History</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed-dim active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md mt-1">Classes</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-1 hover:text-primary dark:hover:text-primary-fixed-dim active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-md text-label-md mt-1">Profile</span>
+</button>
+</nav>
+</body></html>
